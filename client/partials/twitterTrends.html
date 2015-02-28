@@ -1,0 +1,47 @@
+<div class="page-header">
+    <h1>Trending topics worldwide <small>-- as of {{asOf|date:'MMM d, y (h:mm:ss a)'}}</small></h1>
+</div>
+<div class="row">
+    <div class="col-lg-5">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Top 10 twitter topics</strong></h3>
+        </div>
+          <div class="list-group">
+            <a href=""
+               ng-repeat="trend in trends track by $index"
+               ng-click="viewLatestTeets(trend)"
+               ng-class="{active: trend.name === selectedTrendName}"
+               class="list-group-item">
+              {{trend.name}}
+            </a>
+          </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-7">
+    <div ng-show="selectedTrendName" class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">Latest tweets about <strong>"{{ selectedTrendName }}"</strong></h2>
+      </div>
+      <div class="panel-body">
+
+        <div class="media" ng-repeat="item in searchResults track by $index" >
+          <div class="media-left">
+            <a href="#">
+              <img ng-src="{{ item.userProfileImageUrl }}" alt="" class="media-object"/>
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{item.userScreenName}}</h4>
+            {{item.text}}
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+</div>

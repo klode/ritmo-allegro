@@ -1,0 +1,33 @@
+<div class="navbar navbar-inverse" role="navigation" ng-controller="NavbarCtrl">
+<div class="container-fluid">
+  <div class="navbar-header">
+      <button type="button" class="navbar-toggle" ng-init="navbarCollapsed=true" ng-click="navbarCollapsed = !navbarCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/main">RitmoAllegro</a>
+  </div>
+
+  <div class="collapse navbar-collapse" collapse="navbarCollapsed" ng-click="navbarCollapsed = true">
+
+    <!--ul class="nav navbar-nav">
+      <li class={{getActive("/main")}} >
+        <a href="/main">Main</a>
+      </li>
+    </ul-->
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <button type="button" class="btn btn-primary navbar-btn" ng-click="loginOauth('twitter')">Sign in with Twitter</button>
+      </li>
+      <li>
+        <a href="" ng-click="logout()"> Logout </a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+</div>
+
