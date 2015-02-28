@@ -22,7 +22,7 @@ Make sure you complete these steps before running the application
 #####(1) Create a Twitter application
 In order to use Twitter authentication, you must first create an application at [Twitter Developers](https://apps.twitter.com/). When created, an application is assigned a *consumer key* and *consumer secret*. Your application must also implement a *callback URL*, to which Twitter will redirect users after they have approved access for your application.
 - If you run the app locally, set the callback to "http://127.0.0.1:5000/auth/twitter/callback".
-- If you run the app on heroku, set the callback to "https://the-app-name.herokuapp.com/auth/twitter/callback". Where `the-app-name` is the [name of your heroku app](#Deploy-to-Heroku)
+- If you run the app on heroku, set the callback to "https://the-app-name.herokuapp.com/auth/twitter/callback". Where `the-app-name` is the [name of your heroku app](#deploy-to-heroku)
 
 #####(2) Set environment variables
 Create the following environment variables and set them equal to consumer_key, consumer_secret, and callback_url of the Twitter application you just created in step (1). Also set your cookie and session secrets.
