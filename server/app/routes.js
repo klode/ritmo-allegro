@@ -23,7 +23,6 @@
                     res.status(500).send(error);
                     return;
                 }
-                //console.log('PROCESSED DATA', data);
                 res.send(data);
             });
         });
@@ -41,10 +40,6 @@
 
         app.get('/current-user', function (req, res, next) {
             var user = req.user;
-
-            // console.log('Serving the current-user: ' +
-            // JSON.stringify(user, null, 4));
-
             if (user) {
                 res.send({name: user.screen_name || 'username'});
             } else {
@@ -54,7 +49,6 @@
 
         // route middleware to make sure a user is logged in
         function isLoggedIn(req, res, next) {
-            //console.log('isAuthenticated:', req.isAuthenticated() );
             // if user is authenticated in the session, carry on
             if (req.isAuthenticated())
                 return next();
