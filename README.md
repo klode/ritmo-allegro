@@ -2,7 +2,7 @@
 
 An Angular application I wrote to experiment with Twitter authentication, Twitter API, and Heroku deployment.
 
-The app has a landing page where the user can sign-in using his twitter-account credentials. Once logged-in the user is redirected to a page that shows a list 10 twitter subjects which are currently the most popular worldwide. The right panel has a list of twits for the selected subject.
+The app has a landing page where the user can sign-in using his twitter-account credentials. Once logged-in the user is redirected to a page that shows a list of 10 twitter subjects which are currently the most popular worldwide. The right panel has a list of twits for the selected subject.
 
 
 ## The Stack
